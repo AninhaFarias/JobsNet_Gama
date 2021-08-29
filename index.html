@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="./css/style.css">
+
+    <title>Banco de Talentos JobsNet</title>
+</head>
+<body>
+   
+    <header>
+            <div class="flex-container">
+                <div>
+                    <img src="./images/4.png" width="110" alt="Logo" id="logo">
+                </div>
+                <div>
+                    <h1 id="titulo">CADASTRE SEU CURRÍCULO</h1>
+                </div>
+                
+                <ul>
+                    <li>
+                        <a target="blank" href="https://github.com/AninhaFarias"><img src="./images/github_.png"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/anaclaudiafarias1989/"><img src="./images/linkedin.png"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://wa.me/+5515981136054"><img src="./images/whatsapp.png"></a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+  
+    <form>
+        <div>
+            <h3 id="subtitulo">Dados Pessoais</h3><br>
+        </div>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                <label for="nome"><strong>Nome Completo</strong></label>
+                <input type="text" name="nome" id="nome" onchange="Formulario()" required>
+                </div>
+                <div class="campo">
+                    <label for="cargo"><strong> Cargo Pretendido</strong></label>
+                    <input type="text" name="cargo" id="cargo" onchange="Formulario()" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="data"><strong>Data de Nascimento </strong></label>
+                    <input type="data" name="data" id="data" onchange="Formulario()" required placeholder="(dd/mm/aaaa)">
+                </div>
+                <div class="campo">
+                    <label for="civil" name="civil" type="text"><strong>Estado Civil</strong></label>
+                    <select id="civil" onchange="Formulario()" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="1">Amasiado (a)</option>
+                        <option value="2">Casado (a)</option>
+                        <option value="3">Divorciado (a)</option>
+                        <option value="4">Separado (a)</option>
+                        <option value="5">Solteiro (a)</option>
+                        <option value="6">Viúvo (a)</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="sexo" name="sexo" type="text"><strong>Sexo</strong></label>
+                    <select id="sexo" onchange="Formulario()" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="1">Feminino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Prefiro não informar</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="cep"><strong>CEP</strong></label>
+                    <input type="numero" name="cep" id="cep" onchange="Formulario()" placeholder="Somente números" required>
+                </div>
+                <div class="campo"> 
+                    <label for="endereco"><strong>Endereço</strong></label>
+                    <input type="text" name="endereco" id="endereco" onchange="Formulario()" required>
+                </div>
+                <div class="campo">
+                    <label for="num"><strong>Nº</strong></label>
+                    <input type="text" name="num" onchange="Formulario()" id="num" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="bairro"><strong>Bairro</strong></label>
+                    <input type="text" name="bairro" id="bairro" onchange="Formulario()" required>
+                </div>  
+                <div class="campo">
+                    <label for="cidade"><strong>Cidade</strong></label>
+                    <input type="text" name="cidade" id="cidade" onchange="Formulario()" required>
+                </div>
+                <div class="campo">
+                    <label for="estado"><strong>Estado</strong></label>
+                    <input type="text" name="estado" id="estado" onchange="Formulario()" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="celular"><strong>Celular</strong></label>
+                    <input type="text" name="celular" id="celular" onchange="Formulario()" placeholder="Somente números"required>
+                </div>
+                <div class="campo">
+                    <label for="telFixo"><strong>Telefone Fixo</strong></label>
+                    <input type="text" name="telFixo" id="telFixo" onchange="Formulario()" placeholder="Somente números">
+                </div>
+                <div class="campo">
+                    <label for="email"><strong>E-mail</strong></label>
+                    <input type="email" name="email" id="email" onchange="Formulario()" required>
+                </div>  
+            </fieldset><br>
+
+            <div class="campo">
+                <h3 id="subtitulo">Documentos</h3>
+            </div>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                <label for="cpf"><strong>CPF</strong></label>                
+               <input type="numero" maxlength="11" name="cpf" placeholder="Somente números" id = 'cpf_digitado' required></div>
+                 <div id= 'success' class= "alert alert-success" style= "display: none;" role="alert">
+                    <strong>CPF Válido </strong> </div>
+                   <div id= "error" class = "alert alert-danger" style="display: none"; role= "alert">
+                   <strong> OPS! Seu CPF não é válido !</strong> </div>
+                </div>
+    
+                <div class="campo">
+                    <label for="rg"><strong>Identidade</strong></label>
+                    <input type="numero" name="rg" id="rg" onchange="Formulario()" placeholder="Somente números" required>
+                </div>
+                <div class="campo">
+                    <label for="veiculo" name="veiculo" id="veiculo" type="text"><strong>Possui Veículo</strong></label>
+                    <select name="veiculo" onchange="Formulario()" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>    
+                    </select>
+                </div>
+    
+                <div class="campo">
+                    <label for="habilitacao" name="habilitacao" id="habilitacao" type="text"><strong>Habilitação</strong></label>
+                    <select name="habilitacao" onchange="Formulario()" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">AB</option>
+                        <option value="4">C</option>
+                        <option value="5">D</option>
+                        <option value="6">E</option>      
+                    </select>
+                </div>
+            </fieldset>
+
+            
+            <button type = "submit" name= "enviar " value= "Enviar" onclick="validacao()"> ENVIAR </button>
+
+            
+        </form>
+    </body>
+
+        <script src="./script/script.js"></script> 
+    
+        </html>
